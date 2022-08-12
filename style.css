@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --darkgrey: #747682;
+  --mediumlightgrey: #707176;
+  --darkgreen: #3d8168;
+  --black: #000;
+  --bluishblack: #242a31;
+  --cream: #f2e9e2;
+}
+
+*,
+a {
+  color: var(--black);
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.card-container {
+  background-color: var(--white);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: 344px;
+  height: 600px;
+  margin: 30px 15px;
+}
+
+.image-content {
+  height: 239px;
+  border-radius: 10px 10px 0 0;
+  background-image: url("./images/image-product-mobile.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.full-content {
+  margin: 20px;
+}
+
+/* letter spacing adds gaps to the word */
+.top-content h2 {
+  color: var(--mediumlightgrey);
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.top-content h1 {
+  color: var(--bluishblack);
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: "Fraunces";
+  line-height: 36px;
+  margin-top: 10px 0;
+}
+
+.paragraph p {
+  color: var(--darkgrey);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 20px 30px 20px 0;
+}
+
+.amount {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 150px);
+  justify-content: start;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.amount .correct-val p {
+  color: var(--darkgreen);
+  font-size: 2.5rem;
+  font-family: "Fraunces";
+  font-weight: 800;
+}
+
+.amount .strikethrough-val p {
+  color: var(--mediumlightgrey);
+  text-decoration: line-through;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--darkgreen);
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  width: 300px;
+  margin-top: 16px;
+  padding: 0 80px;
+}
+
+.button .button-pd {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.button .img {
+  height: 16px;
+  width: 15px;
+}
+
+.button p {
+  min-width: 100px;
+  font-size: 1.2em;
+  color: var(--white);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 475px) {
+  .card-container {
+    grid-template-rows: 0;
+    grid-template-columns: repeat(2, 1fr);
+    width: 600px;
+    height: 450px;
+    margin-top: 0 auto;
+  }
+
+  .image-content {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px 0px 0px 10px;
+    background-image: url("./images/image-product-desktop.jpg");
+  }
+
+  .full-content {
+    margin: 40px 30px;
+    max-width: 250px;
+  }
+
+  .paragraph p {
+    margin-right: 40px;
+  }
+
+  .button {
+    width: 240px;
+    margin: 20px 60px 60px 0;
+  }
+
+  .button .button-pd {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.attribution {
+  font-family: "Fraunces";
+  grid-auto-flow: column;
+}
